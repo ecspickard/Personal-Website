@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ethan Spickard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+  </head>
+  <body style="background-color: var(--white)">
+    <div class="navbar">
+            <ul class="navbar-item">
+                <li class="navbar-tag">
+                    <a class="navbar-tag-text" href="#index">Ethan Spickard</a>
+                </li>
+                <li class="navbar-list">
+                    <a class="navbar-item-text" href="#index">Home</a>
+                </li>
+                <li class="navbar-list">
+                    <a class="navbar-item-text" href="#index">About Me</a>
+                </li>
+                <li class="navbar-list">
+                    <a class="navbar-item-text" href="#index">Projects</a>
+                </li>
+                <li class="navbar-list">
+                    <a class="navbar-item-text" href="#index">Resume</a>
+                </li>
+            </ul>
+    </div>
+    <div class="hero">
+        <div class="hero-text">
+            <div class="hero-title">
+                 <p>
+                    Hey there, I'm <b>Ethan!</b>
+                </p> 
+                <p>
+                    I'm a <b>Computer Science</b> student aspiring to be a <b>Cybersecurity</b> professional.
+                </p>
+            </div>
+           
+        </div>
+        <div></div>
+        
+    </div>
+    <div class="divider"></div>
+
+    
+    
+    <div class="at-a-glance">
+        
+        <div class="at-a-glance-text">
+             <div><b>4+ Years </b><br> of Coding</div>
+        </div>
+        <div class="at-a-glance-text">
+            <div> <b>Top 17%</b> <br> National Cyber League </div>
+        </div>
+        <div class="at-a-glance-text">
+            <div> <b>3.90</b> <br> GPA </div>
+        </div>
+        <div class="at-a-glance-text">
+            <div> <b> CompTIA <br> PenTest+ </b> </div> 
+        </div>
+
+        <div class="at-a-glance-links">
+            <div class="at-a-glance-buttons at-a-glance-projects"> 
+                <div> <a href="#" class="at-a-glance-links-text">View Projects</a> </div> 
+            </div>
+            <div class="at-a-glance-buttons at-a-glance-contact">
+                <div> <a href="#" class="at-a-glance-links-text">Contact</a> </div> 
+            </div>
+
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <div class="previously">
+        <div class="previously-worked-with"><b>• Previously Worked With •</b></div>
+        <div class="company-logos">
+            <img class="company-logo" src="./images/nwhardware.png"></img>
+            <img class="large-company-logo" src="./images/roanoke.png"></img>
+            <img class="company-logo" src="./images/4h.png"></img>
+        </div>
+        
+    </div>
+
+    <div class="divider"></div>
+    <div style="height:500px"></div>
+
+    <div class="recent-projects">
+        <div class="recent-header">
+            <div class="recent-header-text">Recent Projects</div>
+            <div class="recent-header-button"></div>
+        </div>
+        <div class="recent-content"></div>
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <div class="backToTop">
+            <a class="backToTopText" href="#"> Back To Top </a>
+        </div>
+        <div class="signature">
+            <img class="signature-image" src="signature.png">
+        </div>
+        <div class="connect">
+            <div class="connect-text">
+                Connect
+            </div>
+            <ul class="social-links"> 
+                <li> 
+                    <a href="https://gmail.com">
+                        <img src="./images/email.svg" alt="Email"> 
+                    </a>
+                </li>
+                <li> 
+                    <a href="https://github.com">
+                        <img src="./images/github.svg" alt="GitHub"> 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com">
+                        <img src="./images/linkedin.svg" alt="GitHub"> 
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+  </body>
+
+
+
+  <style>
+    :root {
+        --white: #ebe9e3;
+        --off-white: #b4b2ae;
+        --accent-white: #dddddd;
+        --green: #344e41;
+        --purple: #58355E;
+        --dark-black: #222222;
+    }
+
+    b {
+        font-family: "YoungSerif", Times, serif;
+        font-weight: lighter;
+        color: var(--green);
+    }
+
+    * {
+        box-sizing: border-box;
+        
+    }
+
+    html, body {
+        overflow-x: clip;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero {
+        width: 100%;
+        height: 65vh;
+        box-sizing: border-box;
+        background-color: var(--white);
+        display: grid;
+        grid-template-columns: 60vw 40vw;
+        margin-bottom: 0;
+    }
+
+    .hero-text {
+        color: var(--black);
+        font-size: 4.5rem; 
+        font-family: 'Graphik';
+        display: flex;
+        margin-left: 7vw;
+    }
+
+    .hero-title {
+        align-content: center;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 9vh;  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        z-index: 1000;
+        background-color: var(--green); 
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05), 0 15px 40px rgba(0, 0, 0, 0.2);
+        
+    }
+
+    .divider {
+        height: 3px;
+        width: 90vw;
+        background-color: var(--accent-white);
+        margin: 0;
+        margin-left: 5vw;
+        display: grid;
+        border-radius: 10px;
+    }
+
+    .at-a-glance {
+        width: 90vw;
+        background-color: var(--white);
+        margin: 0;
+        margin-left: 5vw;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        
+    }
+
+    .at-a-glance-text {
+        display: flex;
+        font-family: "Graphik", Times, serif;
+        font-weight: lighter;
+        color: var(--black);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .at-a-glance-links {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 50% 50%;
+    }
+
+    .at-a-glance-buttons {
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        font-family: "YoungSerif";
+        font-size: 1.75rem;
+        border: 2px solid var(--off-white);
+        border-radius: 20px;
+        padding: 10px;
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+
+    .at-a-glance-buttons:hover {
+        transition: all 0.4s ease-out;
+        transform: translateY(-4px);
+    }
+
+    .at-a-glance-projects {
+        background-color: var(--green);
+    }
+
+    .at-a-glance-contact {
+        background-color: var(--purple);
+    }
+
+    .at-a-glance-links-text {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+
+    
+    .navbar-item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: var(--white);
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+    .navbar-list {
+        float:right;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-left: 0.5vw;
+    }
+    .navbar-tag {
+        float:left;
+        margin-right: auto;
+    }
+    .navbar-item-text {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: all 0.6s ease;
+        font-family: "YoungSerif", Times, serif;
+        font-size: 1.5rem;
+        color: inherit
+    }
+    .navbar-tag-text {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: all 0.6s ease;
+        font-family: "YoungSerif", Times, serif;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        color:var(--white);
+    }
+    
+    .navbar-item-text:hover {
+        background-color: #405a4d;
+        border-radius: 20px;
+        transform: translateY(-2px);
+    }
+
+    .previously {
+        width: 66vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1vh;
+    }
+
+    .previously-worked-with {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        margin-top: 5vh;
+        margin-bottom: 1vh;
+    }
+
+    .company-logos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        height: 350px;
+    }
+
+    .large-company-logo {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        height: 300px;
+        border: 2px solid var(--accent-white);
+        border-radius: 15px;
+
+    }
+
+    .company-logo {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        height: 250px;
+        border: 2px solid var(--accent-white);
+        border-radius: 15px;
+
+    }
+
+    
+
+    .footer {
+        width: 100%;
+        height: 12vh;
+        background-color: var(--dark-black);
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .backToTop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        text-decoration: none;
+
+    }
+
+    .backToTopText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        text-decoration: none;
+        font-family: "YoungSerif";
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 2rem;
+        transition: all 0.6s ease;
+        padding: 0.5rem;
+    }
+    
+    .backToTopText:hover {
+        background-color: #31302f;
+        border-radius: 1rem;
+        transition: all 0.6s ease;
+        transform: translateY(-2px);
+    }
+
+
+    .signature {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 0;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .signature-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .connect {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .connect-text {
+        color: var(--white);
+        text-decoration: none;
+        font-family: "YoungSerif";
+        font-weight: lighter;
+        font-size: 2rem;
+        transition: all 0.6s ease;
+        padding: 0.5rem;
+        padding-top: 0;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 16px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }       
+
+    .social-links a {
+      display: inline-flex;
+      background-color: var(--white);
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .social-links img {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.2s ease;
+    }
+
+    .social-links a:hover img {
+        transform: translateY(-2px);
+    }
+    
+    @font-face {
+        font-family: 'YoungSerif';
+        src: url('./fonts/YoungSerif-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Graphik';
+        src: url('./fonts/Graphik-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    
+  </style>
+
+    <script>
+
+    </script>
