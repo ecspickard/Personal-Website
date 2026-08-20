@@ -3,8 +3,13 @@
     --off-white: #b4b2ae;
     --accent-white: #dddddd;
     --green: #344e41;
+    --off-green: #4d6157;
     --purple: #58355E;
     --black: #222222;
+}
+
+a {
+    text-decoration: none;
 }
 
 b {
@@ -136,7 +141,6 @@ body {
 }
 
 .at-a-glance-links-text {
-    text-decoration: none;
     color: inherit;
 }
 
@@ -168,18 +172,17 @@ body {
     display: block;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     transition: all 0.6s ease;
     font-family: "YoungSerif", Times, serif;
     font-size: 1.5rem;
-    color: inherit
+    color: inherit;
+    border-radius: 5px;
 }
 
 .navbar-tag-text {
     display: block;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     transition: all 0.6s ease;
     font-family: "YoungSerif", Times, serif;
     font-weight: bolder;
@@ -189,7 +192,7 @@ body {
 }
 
 .navbar-item-text:hover {
-    background-color: #405a4d;
+    background-color: var(--off-green);
     border-radius: 20px;
     transform: translateY(-2px);
 }
@@ -234,6 +237,128 @@ body {
     border-radius: 15px;
 }
 
+.featured-projects {
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.featured-header {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.featured-header-text {
+    font-family: "YoungSerif", Times, serif;
+    font-weight: lighter;
+    font-size: 3rem;
+    color: var(--green);
+}
+.featured-header-button {
+    text-align: center;
+    font-family: "YoungSerif";
+    font-size: 1.75rem;
+    border: 2px solid var(--off-white);
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: auto;
+    margin-bottom: auto;
+    color: var(--white);
+    transition: all 0.4s ease-out;
+    background-color: var(--purple);
+}
+
+.featured-header-button:hover {
+    transition: all 0.4s ease-out;
+    transform: translateY(-4px);
+}
+
+.featured-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.featured-card {
+    display: block;
+    justify-self: center;
+    height: 30vh;
+    width: 23vw;
+    border: solid var(--off-white) 3px;
+    border-radius: 15px;
+    transform: translateY(0px);
+    transition: all 0.4s ease-out;
+}
+
+.featured-card:hover {
+    transition: all 0.4s ease-out;
+    transform: translateY(-4px);
+}
+
+.featured-image-wrapper {
+    overflow: hidden;
+}
+
+.featured-image {
+    height: 13vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 12px 12px 0 0;
+    border-bottom: solid var(--off-white) 2px ;    
+}
+
+.featured-title {
+    font-family: 'YoungSerif';
+    font-size: 2rem;
+    margin-left: 9px;
+}
+
+.featured-text {
+    display: -webkit-box;
+    font-family: 'Graphik';
+    font-size: 1.5rem;
+    margin-left: 9px;
+    margin-right: 9px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;  
+}
+
+.featured-link {
+    position: absolute;
+    bottom: -1.75rem;
+    justify-self: center;
+    font-family: 'YoungSerif';
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--white);
+    background-color: var(--green);
+    border: solid var(--off-white) 3px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+    padding: 4px;
+    translate: translateY(0);
+}
+
+.featured-card:hover .featured-link {
+    opacity: 1;
+    transition: all 0.4s ease-out;
+}
+
+.featured-link:hover {
+    translate: translateY(-2);
+    background-color: #405a4d;
+}
+
+.featured-link-text {
+    color: var(--white);
+}
+
 .footer {
     width: 100%;
     height: 15vh;
@@ -247,7 +372,6 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
-    text-decoration: none;
 }
 
 .backToTopText {
@@ -255,7 +379,6 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
-    text-decoration: none;
     font-family: "YoungSerif";
     font-style: italic;
     font-weight: lighter;
@@ -295,7 +418,6 @@ body {
 
 .connect-text {
     color: var(--white);
-    text-decoration: none;
     font-family: "YoungSerif";
     font-weight: lighter;
     font-size: 2rem;
