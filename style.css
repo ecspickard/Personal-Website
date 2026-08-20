@@ -57,6 +57,17 @@ body {
     padding-bottom: 0;
 }
 
+.hero-headshot {
+    align-content: center;
+}
+
+.hero-image {
+    align-self: auto;
+    height: 500px;
+    border: solid var(--green) 15px;
+    border-radius: 20px;
+}
+
 .navbar {
     width: 100%;
     height: 9vh;  
