@@ -1,7 +1,8 @@
 :root {
     --white: #ebe9e3;
-    --off-white: #b4b2ae;
+    --off-white: #ebe9e3;
     --accent-white: #dddddd;
+    --whiter: #f7f5ef;
     --green: #344e41;
     --off-green: #4d6157;
     --purple: #58355E;
@@ -17,6 +18,7 @@ b {
     font-weight: lighter;
     color: var(--green);
 }
+
 
 * {
     box-sizing: border-box;
@@ -65,7 +67,7 @@ body {
 .hero-image {
     align-self: auto;
     height: 500px;
-    border: solid var(--green) 15px;
+    border: solid var(--green) 8px;
     border-radius: 20px;
 }
 
@@ -83,7 +85,7 @@ body {
     box-sizing: border-box;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05), 0 15px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04), 0 15px 40px rgba(0, 0, 0, 0.2);
     
 }
 
@@ -132,7 +134,6 @@ body {
     align-items: center;
     font-family: "YoungSerif";
     font-size: 1.75rem;
-    border: 2px solid var(--off-white);
     border-radius: 20px;
     padding: 10px;
     color: var(--white);
@@ -142,13 +143,15 @@ body {
 .at-a-glance-buttons:hover {
     transition: all 0.4s ease-out;
     transform: translateY(-4px);
+    text-decoration: underline var(--white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .at-a-glance-projects {
     background-color: var(--green);
 }
 
-.at-a-glance-contact {
+.at-a-glance-resume {
     background-color: var(--purple);
 }
 
@@ -207,6 +210,7 @@ body {
     background-color: var(--off-green);
     border-radius: 20px;
     transform: translateY(-2px);
+    text-decoration: underline var(--white);
 }
 
 .previously {
@@ -229,15 +233,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     height: 350px;
-}
-
-.large-company-logo {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    height: 300px;
-    border: 2px solid var(--accent-white);
-    border-radius: 15px;
+    
 }
 
 .company-logo {
@@ -247,6 +243,31 @@ body {
     height: 250px;
     border: 2px solid var(--accent-white);
     border-radius: 15px;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.company-logo:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.large-company-logo {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    height: 300px;
+    border: 2px solid var(--accent-white);
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.large-company-logo:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.025);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .featured-projects {
@@ -271,7 +292,6 @@ body {
     text-align: center;
     font-family: "YoungSerif";
     font-size: 1.75rem;
-    border: 2px solid var(--off-white);
     border-radius: 20px;
     padding: 10px;
     margin-left: auto;
@@ -284,6 +304,8 @@ body {
 .featured-header-button:hover {
     transition: all 0.4s ease-out;
     transform: translateY(-4px);
+    text-decoration: underline var(--white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .featured-content {
@@ -298,15 +320,17 @@ body {
     justify-self: center;
     height: 30vh;
     width: 23vw;
-    border: solid var(--off-white) 3px;
+    border: solid var(--accent-white) 2px;
     border-radius: 15px;
     transform: translateY(0px);
     transition: all 0.4s ease-out;
+    background-color: var(--whiter);
 }
 
 .featured-card:hover {
     transition: all 0.4s ease-out;
     transform: translateY(-4px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .featured-image-wrapper {
@@ -355,6 +379,7 @@ body {
     transition: all 0.2s ease-out;
     padding: 4px;
     translate: translateY(0);
+    text-decoration: none;
 }
 
 .featured-card:hover .featured-link {
@@ -365,10 +390,132 @@ body {
 .featured-link:hover {
     translate: translateY(-2);
     background-color: #405a4d;
+    text-decoration: underline var(--white);
 }
 
 .featured-link-text {
     color: var(--white);
+}
+
+.contact {
+    margin: 5vh;
+    display: flex;
+    justify-self: center;
+}
+
+.contact-card {
+    background-color: var(--whiter);
+    height: 53vh;
+    width: 60vw;
+    border: solid var(--accent-white) 1px;
+    border-radius: 25px;
+    display: flex;
+}
+
+.left-contact {
+    height: 100%;
+    width: 30%;
+    background-color: var(--green);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+    display: flex;
+}
+
+.left-contact-text {
+    margin: 0px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: var(--off-green);
+    align-self: center;
+    font-size: 4rem;
+    font-family: 'YoungSerif';
+    letter-spacing: -30px;
+}
+
+.contact-logo {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-55%, -50%);
+    height: 20rem;
+    width: 20rem;
+    align-self: center;
+    border: solid var(--green) 10px;
+    border-radius: 50%;
+    overflow: clip;
+}
+
+.contact-logo-image {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.right-contact {
+    height: 100%;
+    width: 70%;
+    padding: 15px;
+    padding-left: 15%;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.right-contact-header {
+    font-family: "YoungSerif";
+    font-size: 4rem;
+    color: var(--green);
+    justify-self: center;
+    align-self: center;
+}
+
+.right-contact-item {
+    align-self:flex-start;
+    justify-self: left;
+    transition: all 0.4s ease-out;
+    display: flex;
+    text-decoration: none var(--purple);
+}
+
+.right-contact-item:hover {
+    transition: all 0.3s ease-out;
+    border-radius: 25px;
+    background-color: var(--off-white);
+    transform: translateX(15px);
+    text-decoration: underline var(--purple);
+}
+
+.right-contact-item:hover .right-contact-icon{
+    transition: all 1.25s ease;
+    transform: rotateY(360deg);
+}
+
+.right-contact-text {
+    align-self: center;
+    font-family: "Graphik";
+    font-size: 2.25rem;
+    color: var(--black);
+    font-weight: lighter;
+    margin: 10px;
+}
+
+.right-contact-icon {
+    align-self: center;
+    margin: 15px;
+    padding: 1px;
+    width: 75px;
+    height: 75px;
+    background-color: var(--green);
+    border: 0px solid var(--white);
+    border-radius: 10px;
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-out;
+}
+
+.right-contact-picture {
+    height: 100%;
+    width: 100%;
+    filter: invert(95%) sepia(8%) saturate(496%) hue-rotate(353deg) brightness(111%) contrast(84%);;
 }
 
 .footer {
@@ -404,6 +551,7 @@ body {
     border-radius: 1rem;
     transition: all 0.6s ease;
     transform: translateY(-2px);
+    text-decoration: underline var(--white);
 }
 
 .signature {
@@ -457,7 +605,7 @@ body {
 .social-links img {
     width: 24px;
     height: 24px;
-    transition: transform 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .social-links a:hover img {
