@@ -51,6 +51,10 @@ body {
   background-color: var(--white);
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -78,7 +82,7 @@ b {
 
 .navbar {
   width: 100%;
-  height: 9vh;
+  min-height: 9vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -86,7 +90,7 @@ b {
   top: 0;
   z-index: 1000;
   background-color: var(--green);
-  padding: 2vh 10px;
+  padding: 1rem 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04), 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -97,6 +101,7 @@ b {
 
 .navbar-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   list-style-type: none;
@@ -125,10 +130,11 @@ b {
   padding: 14px 16px;
   font-family: "YoungSerif", Times, serif;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 1rem + 1vw, 1.5rem);
   letter-spacing: 1px;
   color: var(--white);
   transition: all 0.6s ease;
+  white-space: nowrap;
 }
 
 .navbar-item-text {
@@ -137,9 +143,10 @@ b {
   padding: 14px 16px;
   border-radius: 5px;
   font-family: "YoungSerif", Times, serif;
-  font-size: 1.5rem;
+  font-size: clamp(0.95rem, 0.8rem + 0.6vw, 1.5rem);
   color: inherit;
   transition: all 0.6s ease;
+  white-space: nowrap;
 }
 
 .navbar-item-text:hover {
@@ -155,11 +162,13 @@ b {
 
 .hero {
   width: 100%;
-  height: 65vh;
+  min-height: 65vh;
   box-sizing: border-box;
   margin-bottom: 0;
   display: grid;
-  grid-template-columns: 60vw 40vw;
+  grid-template-columns: 60% 40%;
+  gap: 2rem;
+  padding: 4vh 0;
   background-color: var(--white);
 }
 
@@ -168,7 +177,7 @@ b {
   margin-left: 7vw;
   color: var(--black);
   font-family: "Graphik";
-  font-size: 4.5rem;
+  font-size: clamp(1.75rem, 1rem + 3.5vw, 4.5rem);
 }
 
 .hero-title {
@@ -189,11 +198,16 @@ b {
 
 .hero-headshot {
   align-content: center;
+  justify-items: center;
 }
 
 .hero-image {
   align-self: auto;
-  height: 500px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border: solid var(--green) 8px;
   border-radius: 50px;
 }
@@ -209,6 +223,7 @@ b {
   padding: 5px;
   display: grid;
   grid-template-columns: repeat(5, 20%);
+  gap: 1.5rem 0;
   background-color: var(--white);
 }
 
@@ -219,13 +234,14 @@ b {
   text-align: center;
   font-family: "Graphik", Times, serif;
   font-weight: lighter;
-  font-size: 3rem;
+  font-size: clamp(1.1rem, 0.6rem + 2vw, 3rem);
   color: var(--black);
 }
 
 .at-a-glance-links {
   display: grid;
   grid-template-rows: 50% 50%;
+  gap: 0.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -237,7 +253,7 @@ b {
   justify-items: center;
   align-items: center;
   font-family: "YoungSerif";
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 0.7rem + 1vw, 1.75rem);
   color: var(--white);
   transition: all 0.4s ease-out;
 }
@@ -266,20 +282,23 @@ b {
    ========================================================= */
 
 .featured-projects {
-  width: 75vw;
+  width: 90vw;
+  max-width: 1400px;
   margin: 7vh auto;
 }
  
 .featured-header {
   display: grid;
   grid-template-columns: auto auto;
+  gap: 1rem;
+  align-items: center;
 }
  
 .featured-header-text {
   margin: 0;
   font-family: "YoungSerif", Times, serif;
   font-weight: lighter;
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
   color: var(--green);
 }
  
@@ -290,10 +309,11 @@ b {
   border-radius: 20px;
   text-align: center;
   font-family: "YoungSerif";
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 0.7rem + 1vw, 1.75rem);
   color: var(--white);
   background-color: var(--purple);
   transition: all 0.4s ease-out;
+  white-space: nowrap;
 }
  
 .featured-header-button:hover {
@@ -305,7 +325,9 @@ b {
  
 .featured-content {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  gap: 2.5rem;
   margin-top: 3vh;
   margin-bottom: 5vh;
 }
@@ -314,8 +336,9 @@ b {
   display: block;
   position: relative;
   justify-self: center;
-  height: 30vh;
-  width: 23vw;
+  flex: 1 1 280px;
+  max-width: 400px;
+  min-height: 30vh;
   border: solid var(--accent-white) 2px;
   border-radius: 15px;
   background-color: var(--whiter);
@@ -375,6 +398,7 @@ b {
   background-color: var(--green);
   opacity: 0;
   translate: translateY(0);
+  text-align: center;
   text-decoration: none;
   transition: all 0.2s ease-out;
 }
@@ -402,7 +426,8 @@ b {
    ========================================================= */
 
 .previously {
-  width: 66vw;
+  width: 90vw;
+  max-width: 1200px;
   margin: 1vh auto 5vh;
 }
 
@@ -413,22 +438,27 @@ b {
   margin-top: 5vh;
   margin-bottom: 1vh;
   font-family: "YoungSerif";
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
   font-weight: normal;
   color: var(--green);
+  text-align: center;
 }
 
 .company-logos {
-  height: 350px;
+  height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
 }
 
 .company-logo {
   display: flex;
   align-self: center;
   justify-self: center;
-  height: 250px;
+  height: auto;
+  width: auto;
+  max-height: 250px;
   border: 2px solid var(--accent-white);
   border-radius: 15px;
   transform: scale(1);
@@ -445,7 +475,9 @@ b {
   display: flex;
   align-self: center;
   justify-self: center;
-  height: 300px;
+  height: auto;
+  width: auto;
+  max-height: 300px;
   border: 2px solid var(--accent-white);
   border-radius: 15px;
   transform: scale(1);
@@ -463,25 +495,29 @@ b {
    ========================================================= */
 
 .contact {
-  margin: 7vh;
+  margin: 7vh 5vw;
   margin-bottom: 15vh;
   display: flex;
   justify-self: center;
+  justify-content: center;
 }
 
 .contact-card {
-  height: 53vh;
-  width: 60vw;
+  min-height: 53vh;
+  width: 90vw;
+  max-width: 1100px;
   display: flex;
   border: solid var(--accent-white) 1px;
   border-radius: 25px;
   background-color: var(--whiter);
+  overflow: hidden;
 }
 
 .left-contact {
   position: relative;
-  height: 100%;
+  height: auto;
   width: 30%;
+  min-width: 90px;
   display: flex;
   background-color: var(--green);
   border-top-left-radius: 25px;
@@ -494,9 +530,9 @@ b {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: "YoungSerif";
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 1rem + 2vw, 4rem);
   font-weight: normal;
-  letter-spacing: -30px;
+  letter-spacing: clamp(-14px, -4px - 1.5vw, -6px);
   color: var(--off-green);
 }
 
@@ -506,9 +542,9 @@ b {
   left: 100%;
   transform: translate(-55%, -50%);
   align-self: center;
-  height: 20rem;
-  width: 20rem;
-  border: solid var(--green) 10px;
+  height: clamp(6rem, 4rem + 12vw, 20rem);
+  width: clamp(6rem, 4rem + 12vw, 20rem);
+  border: solid var(--green) clamp(4px, 0.6vw, 10px);
   border-radius: 50%;
   overflow: clip;
 }
@@ -520,12 +556,13 @@ b {
 }
 
 .right-contact {
-  height: 100%;
+  height: auto;
   width: 70%;
   padding: 15px;
   padding-left: 15%;
   display: grid;
-  grid-template-rows: repeat(4, 25%);
+  grid-template-rows: repeat(4, minmax(60px, 1fr));
+  gap: 0.5rem;
 }
 
 .right-contact-header {
@@ -533,9 +570,10 @@ b {
   justify-self: center;
   align-self: center;
   font-family: "YoungSerif";
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 1rem + 3vw, 4rem);
   font-weight: normal;
   color: var(--green);
+  text-align: center;
 }
 
 .right-contact-item {
@@ -561,10 +599,11 @@ b {
 
 .right-contact-icon {
   align-self: center;
+  flex-shrink: 0;
   margin: 15px;
   padding: 1px;
-  width: 75px;
-  height: 75px;
+  width: clamp(40px, 6vw, 75px);
+  height: clamp(40px, 6vw, 75px);
   background-color: var(--green);
   border: 0px solid var(--white);
   border-radius: 10px;
@@ -583,7 +622,7 @@ b {
   align-self: center;
   margin: 10px;
   font-family: "Graphik";
-  font-size: 2.25rem;
+  font-size: clamp(1rem, 0.7rem + 1vw, 2.25rem);
   font-weight: lighter;
   color: var(--black);
 }
@@ -594,9 +633,11 @@ b {
 
 .footer {
   width: 100%;
-  height: 20vh;
+  min-height: 20vh;
   display: grid;
   grid-template-columns: 33% 34% 33%;
+  gap: 1rem;
+  padding: 1.5rem 0;
   background-color: var(--black);
   border-top: 3px solid var(--off-white);
 }
@@ -616,9 +657,10 @@ b {
   font-family: "YoungSerif";
   font-style: italic;
   font-weight: lighter;
-  font-size: 3rem;
+  font-size: clamp(1.25rem, 1rem + 1.5vw, 3rem);
   color: var(--white);
   transition: all 0.6s ease;
+  text-align: center;
 }
 
 .backToTopText:hover {
@@ -631,8 +673,7 @@ b {
 
 .signature {
   min-height: 0;
-  height: 80%;
-  padding: 1rem;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -657,7 +698,7 @@ b {
   padding-top: 0;
   font-family: "YoungSerif";
   font-weight: lighter;
-  font-size: 3rem;
+  font-size: clamp(1.25rem, 1rem + 1.5vw, 3rem);
   color: var(--white);
   transition: all 0.6s ease;
 }
@@ -686,4 +727,177 @@ b {
 
 .social-links a:hover img {
   transform: translateY(-2px);
+}
+
+/* =========================================================
+   Responsive Breakpoints
+   ========================================================= */
+
+/* Tablet and below: stack the two-column layouts */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 4vh 5vw;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .hero-title {
+    justify-items: center;
+  }
+
+  .hero-headshot {
+    order: -1;
+  }
+
+  .hero-image {
+    max-width: 320px;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+  }
+
+  .left-contact {
+    width: 100%;
+    min-height: 3rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0;
+  }
+
+  .left-contact-text,
+  .contact-logo {
+    display: none;
+  }
+
+  .right-contact {
+    width: 100%;
+    padding: 2rem 5vw;
+    grid-template-rows: none;
+    gap: 1rem;
+  }
+
+  .right-contact-header {
+    margin-top: 0;
+  }
+}
+
+/* Mobile: simplify navbar, stats, and footer */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0.75rem 5px;
+  }
+
+  .navbar-item {
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    row-gap: 0.25rem;
+  }
+
+  .navbar-tag {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .navbar-list {
+    float: none;
+    margin-left: 0;
+  }
+
+  .navbar-tag-text,
+  .navbar-item-text {
+    padding: 8px 10px;
+  }
+
+  .at-a-glance {
+    width: 90vw;
+    margin-left: 5vw;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+  }
+
+  .at-a-glance-links {
+    grid-column: span 2;
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .featured-projects {
+    width: 90vw;
+    margin: 5vh auto;
+  }
+
+  .featured-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .featured-header-button {
+    margin: 0 auto;
+  }
+
+  .featured-card {
+    min-height: auto;
+    padding-bottom: 1.5rem;
+  }
+
+  .right-contact-text {
+    font-size: clamp(0.9rem, 0.7rem + 1.5vw, 1.5rem);
+    word-break: break-word;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+    height: auto;
+  }
+
+  .signature {
+    height: 4rem;
+  }
+}
+
+/* Small phones: tighten spacing and type further */
+@media (max-width: 420px) {
+  .hero-title h1,
+  .hero-title p {
+    margin: 0.5em 0;
+  }
+
+  .at-a-glance-text {
+    font-size: clamp(1rem, 0.8rem + 2vw, 1.5rem);
+  }
+
+  .at-a-glance-links {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    margin: 5vh 4vw;
+    margin-bottom: 8vh;
+  }
+
+  .right-contact {
+    padding-left: 5vw;
+  }
+
+  .social-links img {
+    width: 36px;
+    height: 36px;
+  }
 }
