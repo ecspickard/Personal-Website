@@ -1,196 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Ethan Spickard</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="icon" href="./images/favicon.png"/>
   </head>
-  <body style="background-color: var(--white)">
-    <div class="navbar">
-            <ul class="navbar-item">
-                <li class="navbar-tag">
-                    <a class="navbar-tag-text" href="#index">Ethan Spickard</a>
-                </li>
-                <li class="navbar-list">
-                    <a class="navbar-item-text" href="#index">Home</a>
-                </li>
-                <li class="navbar-list">
-                    <a class="navbar-item-text" href="#index">About Me</a>
-                </li>
-                <li class="navbar-list">
-                    <a class="navbar-item-text" href="#index">Projects</a>
-                </li>
-                <li class="navbar-list">
-                    <a class="navbar-item-text" href="#index">Resume</a>
-                </li>
-            </ul>
-    </div>
-    <div class="hero">
-        <div class="hero-text">
-            <div class="hero-title">
-                 <p>
-                    Hey there, I'm <b>Ethan!</b>
-                </p>
-                <p>
-                    I'm a <b>Computer Science</b> student aspiring to be a <b>Cybersecurity</b> professional.
-                </p>
-            </div>
 
+  <body>
+    <header class="navbar" id="top">
+      <nav aria-label="Primary">
+        <ul class="navbar-item">
+          <li class="navbar-tag">
+            <a class="navbar-tag-text" href="#home">Ethan Spickard</a>
+          </li>
+          <li class="navbar-list">
+            <a class="navbar-item-text" href="#home">Home</a>
+          </li>
+          <li class="navbar-list">
+            <a class="navbar-item-text" href="#about">About Me</a>
+          </li>
+          <li class="navbar-list">
+            <a class="navbar-item-text" href="#projects">Projects</a>
+          </li>
+          <li class="navbar-list">
+            <a class="navbar-item-text" href="#">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <div class="hero-title">
+            <h1>Hey there, I'm <b>Ethan!</b></h1>
+            <p> I'm a <b>Computer Science</b> student aspiring to be a <b>Cybersecurity</b> professional.</p>
+          </div>
         </div>
         <div class="hero-headshot">
-            <img class="hero-image" src="./images/headshot.png"></img>
+          <img class="hero-image" src="./images/headshot.png" alt="Headshot of Ethan Spickard"/>
         </div>
+      </section>
 
-    </div>
-    <div class="divider"></div>
+      <hr class="divider"/>
 
-    
-    
-    <div class="at-a-glance">
-        
+      <section class="at-a-glance">
         <div class="at-a-glance-text">
-             <div><b>4+ Years </b><br> of Coding</div>
+          <div><b>4+ Years</b><br />of Coding</div>
         </div>
         <div class="at-a-glance-text">
-            <div> <b>Top 17%</b> <br> National Cyber League </div>
+          <div><b>Top 17%</b><br />National Cyber League</div>
         </div>
         <div class="at-a-glance-text">
-            <div> <b>3.90</b> <br> GPA </div>
+          <div><b>3.90</b><br />GPA</div>
         </div>
         <div class="at-a-glance-text">
-            <div> <b> CompTIA <br> PenTest+ </b> </div> 
+          <div><b>CompTIA<br />PenTest+</b></div>
         </div>
 
         <div class="at-a-glance-links">
-            <div class="at-a-glance-buttons at-a-glance-projects"> 
-                <div> <a href="#" class="at-a-glance-links-text">View Projects</a> </div> 
-            </div>
-            <div class="at-a-glance-buttons at-a-glance-resume">
-                <div> <a href="#" class="at-a-glance-links-text">Resume</a> </div> 
-            </div>
-
+          <div class="at-a-glance-buttons at-a-glance-projects">
+            <a class="at-a-glance-links-text" href="#projects">View Projects</a>
+          </div>
+          <div class="at-a-glance-buttons at-a-glance-resume">
+            <a class="at-a-glance-links-text" href="#">Resume</a>
+          </div>
         </div>
-    </div>
-    <div class="divider"></div>
-    
-    <div class="featured-projects">
-            <div class="featured-header">
-                <div class="featured-header-text">Featured Projects</div>
-                <a class="featured-header-button" href="#index">View All Projects</a>
-            </div>
-            <div class="featured-content">
-                <div class="featured-card"  href="#index">
-                    <div class="featured-image-wrapper">
-                        <img class="featured-image" src="./images/roanokeskyline.png"></img>
-                    </div>
-                    <div class="featured-title">CoR Projects</div>
-                    <div class="featured-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                    <div class="featured-link"><a class="featured-link-text" href="#index">Check me out!</a></div>
-                </div>
-                <div class="featured-card" href="#index">
-                    <div class="featured-image-wrapper">
-                        <img class="featured-image" src="./images/2024robot.png"></img>
-                    </div>
-                    <div class="featured-title">FRC Team 3939 Robot</div>
-                    <div class="featured-text">Body</div>
-                    <div class="featured-link"><a class="featured-link-text" href="#index">Check me out!</a></div>
-                </div>
-                <div class="featured-card" href="#index">
-                    <div class="featured-image-wrapper">
-                        <img class="featured-image" src="./images/website.png"></img>
-                    </div>
-                    <div class="featured-title">This Website!</div>
-                    <div class="featured-text">Body</div>
-                    <div class="featured-link"><a class="featured-link-text" href="#index">Check me out!</a></div>
-                </div>
+      </section>
 
-                
+      <hr class="divider"/>
+
+      <section class="featured-projects">
+        <header class="featured-header">
+          <h2 class="featured-header-text">Featured Projects</h2>
+          <a class="featured-header-button" href="#">View All Projects</a>
+        </header>
+
+        <div class="featured-content">
+          <article class="featured-card">
+            <div class="featured-image-wrapper">
+              <img class="featured-image" src="./images/roanokeskyline.png" alt="Roanoke skyline, representing the CoR Projects work"/>
             </div>
+            <h3 class="featured-title">CoR Projects</h3>
+            <p class="featured-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id
+              est laborum.
+            </p>
+            <a class="featured-link" href="#">
+              <span class="featured-link-text">Check me out!</span>
+            </a>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-image-wrapper">
+              <img class="featured-image" src="./images/2024robot.png" alt="FRC Team 3939 competition robot"/>
+            </div>
+            <h3 class="featured-title">FRC Team 3939 Robot</h3>
+            <p class="featured-text">Body</p>
+            <a class="featured-link" href="#">
+              <span class="featured-link-text">Check me out!</span>
+            </a>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-image-wrapper">
+              <img class="featured-image" src="./images/website.png" alt="Screenshot of this website"/>
+            </div>
+            <h3 class="featured-title">This Website!</h3>
+            <p class="featured-text">Body</p>
+            <a class="featured-link" href="#">
+              <span class="featured-link-text">Check me out!</span>
+            </a>
+          </article>
         </div>
-    
-    <div class="divider"></div>
-    
-    <div class="previously">
-        <div class="previously-worked-with"><b>• Previously Worked With •</b></div>
+      </section>
+
+      <hr class="divider"/>
+
+      <section class="previously">
+        <h2 class="previously-worked-with">• Previously Worked With •</h2>
         <div class="company-logos">
-            <img class="company-logo" src="./images/nwhardware.png"></img>
-            <img class="large-company-logo" src="./images/roanoke.png"></img>
-            <img class="company-logo" src="./images/4h.png"></img>
+          <img class="company-logo" src="./images/nwhardware.png" alt="Hollins Northwest Hardware logo"/>
+          <img class="large-company-logo" src="./images/roanoke.png" alt="City of Roanoke logo"/>
+          <img class="company-logo" src="./images/4h.png" alt="4-H logo" />
         </div>
-        
-    </div>
+      </section>
 
-    <div class="divider"></div>
+      <hr class="divider"/>
 
-    
-
-    
-
-    <div class="contact">
+      <section class="contact">
         <div class="contact-card">
-            <div class="left-contact">
-                <div class="left-contact-text"> CONTACT</div>
-                <div class="contact-logo"> <img class="contact-logo-image" src="./images/headshot.png"> </div>
+          <div class="left-contact">
+            <p class="left-contact-text">CONTACT</p>
+            <div class="contact-logo">
+              <img class="contact-logo-image" src="./images/headshot.png" alt="Headshot of Ethan Spickard"/>
             </div>
-                
-            <div class="right-contact">
-                <div class="right-contact-header">Reach Out Here!</div>
-                <a class="right-contact-item" href="mailto:ethan@ethanspickard.com">
-                    <div class="right-contact-icon">
-                        <img class="right-contact-picture" src="./images/email.svg">
-                    </div>
-                    <div class="right-contact-text">ethan@ethanspickard.com</div>
-                </a>
-                <a class="right-contact-item" href="https://linkedin.com/in/ethan-spickard">
-                    <div class="right-contact-icon" >
-                        <img class="right-contact-picture" src="./images/linkedin.svg">
-                    </div>
-                    <div class="right-contact-text">Ethan Spickard</div>
-                </a>
-                <a class="right-contact-item" href="https://github.com/ecspickard">
-                    <div class="right-contact-icon">
-                        <img class="right-contact-picture" src="./images/github.svg">
-                    </div>
-                    <div class="right-contact-text">ecspickard</div>
-                </a>
-            </div>
-        </div>
-    </div>
+          </div>
 
+          <div class="right-contact">
+            <h2 class="right-contact-header">Reach Out Here!</h2>
+            <a class="right-contact-item" href="mailto:ethan@ethanspickard.com">
+              <div class="right-contact-icon">
+                <img class="right-contact-picture" src="./images/email.svg" alt="Headshot of Ethan Spickard"/>
+              </div>
+              <div class="right-contact-text">ethan@ethanspickard.com</div>
+            </a>
+            <a class="right-contact-item" href="https://linkedin.com/in/ethan-spickard">
+              <div class="right-contact-icon">
+                <img class="right-contact-picture" src="./images/linkedin.svg" alt="LinkedIn logo"/>
+              </div>
+              <div class="right-contact-text">Ethan Spickard</div>
+            </a>
+            <a class="right-contact-item" href="https://github.com/ecspickard">
+              <div class="right-contact-icon">
+                <img class="right-contact-picture" src="./images/github.svg" alt="GitHub logo"/>
+              </div>
+              <div class="right-contact-text">ecspickard</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-
-    <div class="footer">
-        <div class="backToTop">
-            <a class="backToTopText" href="#"> Back To Top </a>
-        </div>
-        <div class="signature">
-            <img class="signature-image" src="./images/signature.png">
-        </div>
-        <div class="connect">
-            <div class="connect-text">
-                Connect
-            </div>
-            <ul class="social-links"> 
-                <li> 
-                    <a href="mailto:ethan@ethanspickard.com">
-                        <img src="./images/email.svg" alt="Email"> 
-                    </a>
-                </li>
-                <li> 
-                    <a href="https://github.com/ecspickard">
-                        <img src="./images/github.svg" alt="GitHub"> 
-                    </a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/in/ethan-spickard">
-                        <img src="./images/linkedin.svg" alt="GitHub"> 
-                    </a>
-                </li>
-            </ul>
-            
-        </div>
-    </div>
+    <footer class="footer">
+      <div class="backToTop">
+        <a class="backToTopText" href="#home">Back To Top</a>
+      </div>
+      <div class="signature">
+        <img
+          class="signature-image"
+          src="./images/signature.png"
+          alt="Ethan Spickard's Signature"
+        />
+      </div>
+      <div class="connect">
+        <h2 class="connect-text">Connect</h2>
+        <ul class="social-links">
+          <li>
+            <a href="mailto:ethan@ethanspickard.com">
+              <img src="./images/email.svg" alt="Email"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/ethan-spickard">
+              <img src="./images/linkedin.svg" alt="LinkedIn logo"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ecspickard">
+              <img src="./images/github.svg" alt="GitHub logo"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
+</html>
