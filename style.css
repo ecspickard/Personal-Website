@@ -90,7 +90,7 @@ b {
   top: 0;
   z-index: 1000;
   background-color: var(--green);
-  padding: 1rem 10px;
+  padding: calc(1rem + env(safe-area-inset-top)) 10px 1rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04), 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -637,7 +637,7 @@ b {
   display: grid;
   grid-template-columns: 33% 34% 33%;
   gap: 1rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 calc(1.5rem + env(safe-area-inset-bottom));
   background-color: var(--black);
   border-top: 3px solid var(--off-white);
 }
