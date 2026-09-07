@@ -939,9 +939,7 @@ b {
   About Me
 */
 
-
-
-.about-me-container > div:nth-child(even){
+.about-me-container > .about-me-section:nth-child(even) {
   background-color: var(--background-green);
 }
 
@@ -963,16 +961,14 @@ b {
   box-shadow: 5px 5px 0px 0px var(--purple);
 }
 
-.about-me-container > div:nth-child(even) h2{
+.about-me-container > .about-me-section:nth-child(even) h2 {
   transform: rotate(-3deg);
 }
 
-.about-me-container > div:nth-child(odd) h2{
+.about-me-container > .about-me-section:nth-child(odd) h2 {
   right: 12.5rem;
   transform: rotate(3deg);
 }
-
-
 
 .about-me-container p {
   font-family: "Inter";
@@ -1001,6 +997,15 @@ b {
   transition: ease-out 0.5s;
 }
 
+.about-me-container img {
+  transition: ease 0.5s;
+}
+
+.about-me-container img:hover {
+  transform: scale(1.025) rotate(-0.5deg);
+  transition: ease 0.5s;
+  z-index: 1000;
+}
 
 .about-me-hero-title {
   font-family: "Inter";
@@ -1036,11 +1041,13 @@ b {
 
 .about-me-hero-image {
   border-radius: 10px;
-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
-
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 
 .robot-images {
-  border-radius: 20px;
   width: 100%;
   max-width: 450px;
   height: auto;
@@ -1076,7 +1083,7 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   font-size: x-large !important;
   margin: 0;
   padding: 0;
-  color:  var(--grey) !important;
+  color: var(--grey) !important;
 }
 
 .image-half {
@@ -1089,6 +1096,23 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
+}
+
+/* Corner radii for the four robot photos in the grid (was inline style="") */
+.image-grid img:nth-child(1) {
+  border-top-left-radius: 20px;
+}
+
+.image-grid img:nth-child(2) {
+  border-top-right-radius: 20px;
+}
+
+.image-grid img:nth-child(3) {
+  border-bottom-left-radius: 20px;
+}
+
+.image-grid img:nth-child(4) {
+  border-bottom-right-radius: 20px;
 }
 
 .music-images {
@@ -1141,7 +1165,7 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 .computer-image {
   border-radius: 10px;
   height: 550px;
-  width: auto;  
+  width: auto;
 }
 
 .cat-images {
@@ -1168,4 +1192,9 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 .cat-item .about-me-caption {
   margin-top: 8px;
   text-align: center;
+}
+
+/* Cats intro paragraph needs to hug its text (was inline style="") */
+.cats-intro {
+  width: fit-content;
 }
