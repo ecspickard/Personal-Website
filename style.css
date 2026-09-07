@@ -1247,7 +1247,9 @@ b {
   .about-me-container h2 {
     position: static;
     display: inline-block;
+    font-size: 1.35rem !important;
     margin: 0 0 2rem 0;
+    padding-left: 20px;
     transform: none !important;
   }
 
