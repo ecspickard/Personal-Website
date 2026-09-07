@@ -755,7 +755,6 @@ b {
    Responsive Breakpoints
    ========================================================= */
 
-/* Tablet and below: stack the two-column layouts */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -811,7 +810,6 @@ b {
   }
 }
 
-/* Mobile: simplify navbar, stats, and footer */
 @media (max-width: 700px) {
   .navbar {
     padding-top: calc(0.75rem + env(safe-area-inset-top, 0px));
@@ -897,7 +895,6 @@ b {
   }
 }
 
-/* Small phones: tighten spacing and type further */
 @media (max-width: 420px) {
   .hero-title h1,
   .hero-title p {
@@ -932,12 +929,9 @@ b {
 
 
 
-
-
-
-/**
-  About Me
-*/
+/* =========================================================
+   About Me
+   ========================================================= */
 
 .about-me-container > .about-me-section:nth-child(even) {
   background-color: var(--background-green);
@@ -947,11 +941,11 @@ b {
   position: absolute;
   top: -8rem;
   font-family: "YoungSerif";
-  font-size: 5rem;
+  font-size: clamp(2.25rem, 6vw, 5rem);
   font-weight: lighter;
   color: var(--white);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: clamp(16px, 4vw, 40px);
+  padding-right: clamp(16px, 4vw, 40px);
   background-color: var(--green);
   border: solid 5px var(--white);
   border-top-left-radius: 100px;
@@ -959,6 +953,7 @@ b {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 5px 5px 0px 0px var(--purple);
+  max-width: calc(100vw - 4rem);
 }
 
 .about-me-container > .about-me-section:nth-child(even) h2 {
@@ -972,7 +967,7 @@ b {
 
 .about-me-container p {
   font-family: "Inter";
-  font-size: 2rem;
+  font-size: clamp(1.05rem, 2.2vw, 2rem);
   color: var(--black);
   padding: 15px;
   display: inline-block;
@@ -980,13 +975,13 @@ b {
 
 .about-me-container b {
   font-family: "YoungSerif";
-  font-size: 2rem;
+  font-size: clamp(1.05rem, 2.2vw, 2rem);
   color: var(--purple);
 }
 
 .about-me-container a {
   font-family: "YoungSerif";
-  font-size: 2rem;
+  font-size: clamp(1.05rem, 2.2vw, 2rem);
   text-decoration: underline dotted;
   color: var(--purple);
   transition: ease-out 0.5s;
@@ -999,6 +994,7 @@ b {
 
 .about-me-container img {
   transition: ease 0.5s;
+  max-width: 100%;
 }
 
 .about-me-container img:hover {
@@ -1009,32 +1005,32 @@ b {
 
 .about-me-hero-title {
   font-family: "Inter";
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 6vw, 5rem);
   color: var(--black);
 }
 
 .about-me-hero-title b {
   font-family: "YoungSerif";
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 6vw, 5rem);
   color: var(--green);
 }
 
 .about-me-hero-subtitle {
   font-family: "Inter";
-  font-size: 3rem;
+  font-size: clamp(1.35rem, 3.2vw, 3rem);
   color: var(--black);
   margin: 20px 0px;
 }
 
 .about-me-hero-body {
   font-family: "Inter";
-  font-size: 3rem;
+  font-size: clamp(1.35rem, 3.2vw, 3rem);
   color: var(--black);
 }
 
 .about-me-hero-segue {
   font-family: "YoungSerif";
-  font-size: 7rem;
+  font-size: clamp(2.75rem, 7vw, 7rem);
   font-style: italic;
   color: var(--green);
 }
@@ -1045,6 +1041,8 @@ b {
     rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 100%;
+  height: auto;
 }
 
 .robot-images {
@@ -1096,9 +1094,14 @@ b {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
+  width: 100%;
 }
 
-/* Corner radii for the four robot photos in the grid (was inline style="") */
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
 .image-grid img:nth-child(1) {
   border-top-left-radius: 20px;
 }
@@ -1118,6 +1121,8 @@ b {
 .music-images {
   border-radius: 20px;
   margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 .music-text {
@@ -1126,6 +1131,8 @@ b {
 
 .virginia-images {
   height: 475px;
+  max-width: 100%;
+  width: auto;
   margin: 20px;
   border-radius: 10px;
 }
@@ -1143,6 +1150,7 @@ b {
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  max-width: 100%;
 }
 
 .virginia-item .about-me-caption {
@@ -1165,11 +1173,14 @@ b {
 .computer-image {
   border-radius: 10px;
   height: 550px;
+  max-width: 100%;
   width: auto;
 }
 
 .cat-images {
   height: 475px;
+  max-width: 100%;
+  width: auto;
   margin: 20px;
   border-radius: 10px;
 }
@@ -1187,6 +1198,7 @@ b {
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  max-width: 100%;
 }
 
 .cat-item .about-me-caption {
@@ -1194,7 +1206,81 @@ b {
   text-align: center;
 }
 
-/* Cats intro paragraph needs to hug its text (was inline style="") */
 .cats-intro {
   width: fit-content;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .about-me-section {
+    padding-top: 7rem;
+    padding-bottom: 6vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .split-half,
+  .split-two-third,
+  .split-third {
+    flex: 1 1 100%;
+  }
+
+  .split-two-third {
+    padding: 0;
+    order: 2;
+  }
+
+  .split-third {
+    padding: 0 0 20px 0;
+    order: 1;
+  }
+
+  .music-text {
+    padding-left: 15px !important;
+    order: 2;
+  }
+
+  .music-images {
+    order: 1;
+  }
+
+  .about-me-container h2 {
+    position: static;
+    display: inline-block;
+    margin: 0 0 2rem 0;
+    transform: none !important;
+  }
+
+  .about-me-container > .about-me-section:nth-child(odd) h2 {
+    right: auto;
+  }
+
+  .virginia-images,
+  .cat-images {
+    height: auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 10px;
+  }
+
+  .computer-image {
+    height: auto;
+    width: 100%;
+  }
+
+  .virginia-item,
+  .cat-item {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    gap: 6px;
+  }
+
+  .virginia-images,
+  .cat-images {
+    max-width: 100%;
+  }
 }
