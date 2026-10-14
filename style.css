@@ -356,7 +356,7 @@ b {
   justify-self: center;
   flex: 1 1 280px;
   max-width: 800px;
-  min-height: 35vh;
+  min-height: 38vh;
   border: solid var(--accent-white) 2px;
   border-radius: 15px;
   background-color: var(--whiter);
@@ -1052,6 +1052,17 @@ b {
   border-radius: 5px;
 }
 
+.about-me-hero {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
 .about-me-section {
   display: flex;
   width: 100%;
@@ -1067,6 +1078,7 @@ b {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   width: 100%;
 }
 
@@ -1120,9 +1132,10 @@ b {
 
 .music-images {
   border-radius: 20px;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   height: auto;
+  align-self: center; /* stop the flex row from stretching the image to the text's height */
 }
 
 .music-text {
@@ -1130,27 +1143,34 @@ b {
 }
 
 .virginia-images {
-  height: 425px;
-  max-width: 100%;
-  width: auto;
-  margin: 20px;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--gallery-ratio, 4 / 5);
+  object-fit: cover;
+  margin: 0;
   border-radius: 10px;
 }
 
 .virginia-gallery {
+  --gallery-ratio: 4 / 5;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
+  gap: clamp(0.75rem, 2vw, 2.5rem);
   width: 100%;
+  margin-top: 20px;
 }
 
 .virginia-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
-  max-width: 100%;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
 }
 
 .virginia-item .about-me-caption {
@@ -1168,37 +1188,48 @@ b {
   flex: 1 1 33%;
   min-width: 0;
   padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .computer-image {
   border-radius: 10px;
-  height: 550px;
+  height: auto;
+  max-height: 550px;
   max-width: 100%;
   width: auto;
 }
 
 .cat-images {
-  height: 475px;
-  max-width: 100%;
-  width: auto;
-  margin: 20px;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--gallery-ratio, 4 / 5);
+  object-fit: cover;
+  margin: 0;
   border-radius: 10px;
 }
 
 .cat-gallery {
+  --gallery-ratio: 4 / 5;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
+  gap: clamp(0.75rem, 2vw, 2.5rem);
   width: 100%;
+  margin-top: 20px;
 }
 
 .cat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
-  max-width: 100%;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
 }
 
 .cat-item .about-me-caption {
@@ -1211,7 +1242,53 @@ b {
   max-width: 100%;
 }
 
+/* Hero: center the photo against the title, subtitle and body (rows 1-3),
+   leaving out the "I also love..." line (row 4) */
+.about-me-container > .about-me-hero:first-child .split-container {
+  display: grid;
+  grid-template-columns: 67% 33%;
+  align-items: start;
+}
+
+.about-me-container > .about-me-hero:first-child .split-two-third {
+  display: contents;
+}
+
+.about-me-container > .about-me-hero:first-child .split-two-third > div {
+  grid-column: 1;
+  padding: 0 15px; /* matches the 15px the text column had before */
+}
+
+.about-me-container > .about-me-hero:first-child .split-two-third > div:first-child {
+  padding-top: 15px;
+}
+
+.about-me-container > .about-me-hero:first-child .split-two-third > div:last-child {
+  padding-bottom: 15px;
+}
+
+.about-me-container > .about-me-hero:first-child .split-third {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+}
+
 @media (max-width: 768px) {
+  /* Hero goes back to the stacked flex layout on mobile */
+  .about-me-container > .about-me-section:first-child .split-container {
+    display: flex;
+  }
+
+  .about-me-container > .about-me-section:first-child .split-two-third {
+    display: block;
+  }
+
+  .about-me-container > .about-me-section:first-child .split-two-third > div,
+  .about-me-container > .about-me-section:first-child .split-two-third > div:first-child,
+  .about-me-container > .about-me-section:first-child .split-two-third > div:last-child {
+    padding: 0;
+  }
+
   .about-me-section {
     padding-top: 7rem;
     padding-bottom: 6vh;
@@ -1257,22 +1334,31 @@ b {
     right: auto;
   }
 
-  .virginia-images,
-  .cat-images {
-    height: auto;
+  /* Galleries collapse to a single column only on mobile */
+  .virginia-gallery,
+  .cat-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .virginia-item,
+  .cat-item {
+    flex: 0 0 auto;
     width: 100%;
     max-width: 320px;
-    margin: 10px;
+  }
+
+  .virginia-images,
+  .cat-images {
+    aspect-ratio: auto;
+    object-fit: initial;
   }
 
   .computer-image {
     height: auto;
     width: 100%;
-  }
-
-  .virginia-item,
-  .cat-item {
-    margin: 10px;
+    max-height: none;
   }
 }
 
@@ -1281,8 +1367,8 @@ b {
     gap: 6px;
   }
 
-  .virginia-images,
-  .cat-images {
+  .virginia-item,
+  .cat-item {
     max-width: 100%;
   }
 }
